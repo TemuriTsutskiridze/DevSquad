@@ -159,11 +159,39 @@ select {
   gap: 24px;
 }
 
-/* input[type="date"]::placeholder {
-  color: #999; /* Placeholder text color */
-/* font-style: italic; */
-/* } */
-*/ .submit-button {
+#date {
+  padding-left: 40px;
+  color: #1a1a1f;
+  font-family: "FiraGO", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+input[type="date"] {
+  position: relative;
+  background: url(./images/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 250px;
+  opacity: 0;
+}
+
+/*
+input[type="date"] {
+  background: url("./images/calendar.svg") no-repeat right;
+  -webkit-appearance: none; /* For Safari */
+/* appearance: none;
+} */
+
+.submit-button {
   display: flex;
   justify-content: flex-end;
 }
