@@ -33,7 +33,7 @@ main {
   /* gap: 24px; */
 }
 .content {
-  width: 50%;
+  width: 600px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -143,4 +143,9 @@ ul.first-list li::before {
   content: "•";
   display: inline-block;
   margin-right: 0.5em;
+}
+
+.description-input {
+  width: 100%;
+  padding-bottom: 92px;
 }
