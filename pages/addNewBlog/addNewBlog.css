@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -8,13 +14,19 @@ header {
 }
 
 main {
+  flex: 1;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fbfaff;
 }
 
 #arrow {
   align-self: flex-start;
   padding: 40px 0px 0px 76px;
   display: inline-block;
+}
+
+main h1 {
 }
