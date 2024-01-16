@@ -159,7 +159,11 @@ select {
   gap: 24px;
 }
 
-.submit-button {
+/* input[type="date"]::placeholder {
+  color: #999; /* Placeholder text color */
+/* font-style: italic; */
+/* } */
+*/ .submit-button {
   display: flex;
   justify-content: flex-end;
 }
