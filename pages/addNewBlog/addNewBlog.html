@@ -3,10 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="../../common.css" />
     <link rel="stylesheet" href="addNewBlog.css" />
     <script src="addNewBlog.js"></script>
-    <title>Document</title>
+    <title>Add new blog</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="./images/LOGO-02 3.png" alt="redberry logo in red" />
+    </header>
+
+    <div id="arrow">
+      <a href="/DevSquad/pages/"><img src="./images/Arrow.svg" alt="" /></a>
+    </div>
+
+    <main>
+      <section id="main-section">
+        <div
+          class="file-upload-container"
+          ondrop="dropHandler(event);"
+          ondragover="dragOverHandler(event);">
+          <input type="file" id="fileInput" hidden />
+          <label for="fileInput" class="file-drag-area">
+            <div class="icon-container">
+              <img src="./images/folder-add.png" alt="" />
+            </div>
+            <p>ჩააგდეთ ფაილი აქ ან <span> აირჩიეთ ფაილი</span></p>
+          </label>
+        </div>
+      </section>
+
+      <section id="author-section">
+        <div class="author-input small-input">
+          <h2>ავტორი *</h2>
+          <form action="submit">
+            <input
+              class="title-input"
+              type="name"
+              placeholder="შეიყვანეთ ავტორი" />
+          </form>
+
+          <ul class="validation-details">
+            <li>მინიმუმ 4 სიმბოლო</li>
+            <li>მინიმუმ ორი სიტყვა</li>
+            <li>მხოლოდ ქართული სიმბოლოები</li>
+          </ul>
+        </div>
+
+        <div class="title-input small-input">
+          <h2>სათაური *</h2>
+          <form action="submit">
+            <input
+              class="title-input"
+              type="title"
+              placeholder="შეიყვანეთ სათაური" />
+          </form>
+          <ul class="validation-details">
+            <li>მინიმუმ 2 სიმბოლო</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="descriptions-section"></section>
+      <h2>აღწერა *</h2>
+
+      <form action="submit">
+        <input
+          type="text"
+          name="description"
+          id="description-input"
+          placeholder="შეიყვანეთ აღწერა" />
+      </form>
+      <ul class="validation-details">
+        <li>მინიმუმ ორი სიმბოლო</li>
+      </ul>
+
+      <section id="date-section">
+        <div class="date-input small-input">
+          <h2>გამოქვეყნების თარიღი *</h2>
+          <form action="submit">
+            <input type="date" name="date-input" id="date" />
+          </form>
+        </div>
+
+        <div class="category-choice">
+          <h2>კატეგორია *</h2>
+          <select id="category" name="category">
+            <option value="" selected disabled>Choose category</option>
+            <option value="market">მარკეტი</option>
+            <option value="application">აპლიკაცია</option>
+            <option value="artificial-inteligence">ხელოვნური ინტელექტი</option>
+            <option value="ux-ui">UI-UX</option>
+            <option value="research">კვლევა</option>
+            <option value="figma">Figma</option>
+          </select>
+        </div>
+
+        <div class="email-input">
+          <h2>ელ-ფოსტა</h2>
+          <form action="submit">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Example@redberry.ge" />
+          </form>
+        </div>
+      </section>
+
+      <div class="submit-button">
+        <button type="submit">გამოქვეყნება</button>
+      </div>
+    </main>
+  </body>
 </html>
