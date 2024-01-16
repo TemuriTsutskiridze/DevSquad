@@ -10,3 +10,18 @@ function getDate() {
 }
 
 getDate();
+
+const dropArea = document.getElementsByClassName("file-drag-area");
+const inputFile = document.getElementById("input-file");
+function dragAndDrop() {}
+
+dragAndDrop();
+
+dropArea.addEventListener("dragover", function (event) {
+  event.preventDefault();
+});
+
+dropArea.addEventListener("drop", function (event) {
+  event.preventDefault();
+  inputFile.files = event.dataTransfer.files;
+});

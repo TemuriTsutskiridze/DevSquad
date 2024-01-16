@@ -182,14 +182,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: absolute;
   right: 250px;
   opacity: 0;
+  cursor: pointer;
 }
 
-/*
-input[type="date"] {
-  background: url("./images/calendar.svg") no-repeat right;
-  -webkit-appearance: none; /* For Safari */
-/* appearance: none;
-} */
+#category {
+  color: #85858d;
+  font-family: "FiraGO", "sans-serif";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
 
 .submit-button {
   display: flex;
