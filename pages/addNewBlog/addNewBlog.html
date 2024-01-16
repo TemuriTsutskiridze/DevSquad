@@ -36,11 +36,11 @@
         </section>
 
         <section id="author-section">
-          <div class="author-input small-input">
+          <div class="author-input">
             <h2>ავტორი *</h2>
             <form action="submit" name="author-submit">
               <input
-                class="title-input"
+                class="title-input small-input"
                 type="name"
                 placeholder="შეიყვანეთ ავტორი" />
             </form>
@@ -52,11 +52,11 @@
             </ul>
           </div>
 
-          <div class="title-input small-input">
+          <div class="title-input">
             <h2>სათაური *</h2>
             <form action="submit" name="title submit">
               <input
-                class="title-input"
+                class="title-input small-input"
                 type="title"
                 placeholder="შეიყვანეთ სათაური" />
             </form>
@@ -70,6 +70,7 @@
           <h2>აღწერა *</h2>
           <form action="submit" name="description-submit">
             <input
+              class="small-input"
               type="text"
               name="description"
               id="description-input"
@@ -81,10 +82,14 @@
         </section>
 
         <section id="date-section">
-          <div class="date-input small-input">
+          <div class="date-input">
             <h2>გამოქვეყნების თარიღი *</h2>
             <form action="submit" name="date-submit">
-              <input type="date" name="date-input" id="date" />
+              <input
+                type="date"
+                name="date-input"
+                id="date"
+                class="small-input" />
             </form>
           </div>
 
