@@ -149,3 +149,29 @@ ul.first-list li::before {
   width: 100%;
   padding-bottom: 92px;
 }
+select {
+  margin-top: 8px;
+}
+
+#date-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button button {
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-style: normal;
+  padding: 10px 100px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  border-radius: 8px;
+  background: #e4e3eb;
+}
