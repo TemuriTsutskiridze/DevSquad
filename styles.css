@@ -1,0 +1,71 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400,500,600,700,800');
+
+body {
+    font-family: FiraGO;
+    width: 1920px;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    background: #F3F2FA;
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1920px;
+    height: 80px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    border-bottom: 1px solid #E4E3EB;
+    background: #FFF;
+}
+
+header button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 10px 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #5D37F3;
+    color: #FFF;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+header button:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 2px 2px 2px #390af3;
+            box-shadow: 2px 2px 2px #390af3;
+}
+
+
+#log-in-btn {
+    margin-left: auto; 
+    margin-right: 76px;
+}
+
+
+
+h1 {
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    margin-left: 89px;
+    margin-top: 128px;
+}
