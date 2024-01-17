@@ -64,91 +64,13 @@ function preventDefaults(e) {
   e.stopPropagation();
 }
 
-["dragenter", "dragover"].forEach((eventName) => {
-  fileDragArea.addEventListener(
-    eventName,
-    () => fileDragArea.classList.add("highlight"),
-    false
-  );
-});
-
-["dragleave", "drop"].forEach((eventName) => {
-  fileDragArea.addEventListener(
-    eventName,
-    () => fileDragArea.classList.remove("highlight"),
-    false
-  );
-});
-
 fileDragArea.addEventListener("drop", function (e) {
   const dt = e.dataTransfer;
   const file = dt.files[0];
+  console.log(file);
 
   updateUIWithFile(file);
   imageInput.files = dt.files;
 });
 
-// category choice
-
-document.addEventListener("DOMContentLoaded", () => {
-  const selectBox = document.querySelector(".select-box");
-  const optionsContainer = document.querySelector(".options-container");
-  const selectedItemsSpan = document.querySelector(".selected-items");
-  const selectElement = document.getElementById("category");
-  const options = selectElement.querySelectorAll("option");
-
-  // Function to update the select box display and the original select element
-  function updateSelectBox() {
-    const selectedOptions = Array.from(selectElement.selectedOptions).map(
-      (option) => option.text
-    );
-    selectedItemsSpan.innerHTML = selectedOptions
-      .map(
-        (text) =>
-          `<span class="tag">${text}<span class="remove">&times;</span></span>`
-      )
-      .join("");
-    // Show placeholder text if nothing is selected
-    if (selectedOptions.length === 0) {
-      selectedItemsSpan.textContent = "აირჩიე კატეგორია";
-    }
-  }
-
-  // Toggle options display
-  selectBox.addEventListener("click", () => {
-    optionsContainer.hidden = !optionsContainer.hidden;
-  });
-
-  // Insert options into the custom options container
-  options.forEach((option) => {
-    if (option.disabled) return; // Skip placeholder option
-    const div = document.createElement("div");
-    div.textContent = option.text;
-    div.setAttribute("class", "option-item");
-    div.dataset.value = option.value;
-    div.addEventListener("click", () => {
-      option.selected = !option.selected; // Toggle selection
-      div.classList.toggle("selected", option.selected); // Toggle class for styling
-      updateSelectBox(); // Update display
-    });
-    optionsContainer.appendChild(div);
-  });
-
-  // Remove tag handler
-  selectedItemsSpan.addEventListener("click", (event) => {
-    if (event.target.classList.contains("remove")) {
-      const valueToRemove = event.target.parentNode.textContent
-        .replace("×", "")
-        .trim();
-      options.forEach((option) => {
-        if (option.text === valueToRemove) {
-          option.selected = false; // Unselect the option
-        }
-      });
-      updateSelectBox(); // Update display
-    }
-  });
-
-  // Initial update in case there are preselected values
-  updateSelectBox();
-});
+// ---------category choice

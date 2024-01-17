@@ -181,69 +181,6 @@ select {
   /* display: none; */
 }
 
-.custom-select {
-  position: relative;
-  user-select: none;
-}
-
-.select-box {
-  background: #eee;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.selected-items {
-  flex-grow: 1;
-}
-
-.select-icon {
-  /* Style your dropdown icon */
-}
-
-.options-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  z-index: 10;
-  padding: 10px;
-  border-radius: 5px;
-  display: none; /* initially hidden */
-}
-
-.option-item {
-  padding: 5px 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.option-item:hover,
-.option-item.selected {
-  background-color: #efefef;
-}
-
-/* Style for tags like in your second image */
-.tag {
-  display: inline-block;
-  background: #ffc107;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin: 0 5px;
-  font-size: 0.8em;
-}
-
-.tag .remove {
-  margin-left: 8px;
-  cursor: pointer;
-}
-
 #date-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
