@@ -3,11 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="../../common.css" />
     <link rel="stylesheet" href="addNewBlog.css" />
-    <script src="addNewBlog.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="addNewBlog.js"></script>
     <title>Add new blog</title>
   </head>
   <body>
@@ -21,27 +19,59 @@
       </div>
 
       <div class="content">
+        <form id="main-form" action="submit">
+
         <section id="main-section">
           <h1>ბლოგის დამატება</h1>
           <h2 class="photo-upload">ატვირთეთ ფოტო</h2>
           <div class="file-upload-container">
             <label for="input-file" class="file-drag-area">
               <input type="file" accept="image/*" id="input-file" hidden />
-              <img src="./images/folder-add.png" class="icon" alt="" />
+              <img
+                src="./images/folder-add.png"
+                class="icon"
+                alt="folder icon" />
               <p>ჩააგდეთ ფაილი აქ ან <span> აირჩიეთ ფაილი</span></p>
             </label>
+          </div>
+          <div id="file-info" class="file-info" hidden>
+            <div class="right-side">
+              <img src="./images/gallery.png" alt="img icon" />
+              <span id="file-name"></span>
+            </div>
+
+            <button id="remove-file" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none">
+                <path
+                  d="M7.75781 16.2426L16.2431 7.75736"
+                  stroke="#1A1A1F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M16.2431 16.2426L7.75781 7.75736"
+                  stroke="#1A1A1F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
           </div>
         </section>
 
         <section id="author-section">
           <div class="author-input">
             <h2>ავტორი *</h2>
-            <form action="submit" name="author-submit">
-              <input
-                class="title-input small-input"
-                type="name"
-                placeholder="შეიყვანეთ ავტორი" />
-            </form>
+
+            <input
+              class="title-input small-input"
+              type="name"
+              placeholder="შეიყვანეთ ავტორი" />
 
             <ul class="validation-details first-list">
               <li>მინიმუმ 4 სიმბოლო</li>
@@ -52,12 +82,12 @@
 
           <div class="title-input">
             <h2>სათაური *</h2>
-            <form action="submit" name="title-submit">
-              <input
-                class="title-input small-input"
-                type="title"
-                placeholder="შეიყვანეთ სათაური" />
-            </form>
+
+            <input
+              class="title-input small-input"
+              type="title"
+              placeholder="შეიყვანეთ სათაური" />
+
             <ul class="validation-details">
               <li>მინიმუმ 2 სიმბოლო</li>
             </ul>
@@ -66,14 +96,14 @@
 
         <section id="descriptions-section">
           <h2>აღწერა *</h2>
-          <form action="submit" name="description-submit">
-            <input
-              class="description-input small-input"
-              type="text"
-              name="description"
-              id="description-input"
-              placeholder="შეიყვანეთ აღწერა" />
-          </form>
+
+          <input
+            class="description-input small-input"
+            type="text"
+            name="description"
+            id="description-input"
+            placeholder="შეიყვანეთ აღწერა" />
+
           <ul class="validation-details">
             <li>მინიმუმ 2 სიმბოლო</li>
           </ul>
@@ -82,13 +112,12 @@
         <section id="date-section">
           <div class="date-input">
             <h2>გამოქვეყნების თარიღი *</h2>
-            <form action="submit" name="date-submit">
-              <input
-                type="date"
-                name="date-input"
-                id="date"
-                class="small-input" />
-            </form>
+
+            <input
+              type="date"
+              name="date-input"
+              id="date"
+              class="small-input" />
           </div>
 
           <div class="category-choice">
@@ -108,19 +137,20 @@
 
           <div class="email-input">
             <h2>ელ-ფოსტა</h2>
-            <form action="submit" name="email-submit">
+        
               <input
                 class="small-input"
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Example@redberry.ge" />
-            </form>
+  
           </div>
         </section>
 
         <div class="submit-button">
           <button type="submit">გამოქვეყნება</button>
+        </form>
         </div>
       </div>
     </main>
