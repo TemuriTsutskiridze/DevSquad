@@ -1,0 +1,54 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: #F3F2FA;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #E4E3EB;
+    background: #FFF;
+}
+
+
+header button {
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #5D37F3;
+    color: #FFF;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+header button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #390af3;
+}
+
+
+
+#log-in-btn {
+    margin-left: auto; 
+    margin-right: 76px;
+}
+
+
+
+h1 {
+    color: #1A1A1F;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    margin-left: 89px;
+    margin-top: 128px;
+}
