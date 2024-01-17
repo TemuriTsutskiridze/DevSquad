@@ -122,7 +122,16 @@
 
           <div class="category-choice">
             <h2>კატეგორია *</h2>
-            <select id="category" name="category" class="small-input">
+            <div class="custom-select-container">
+           <div class="custom-select">
+    <div class="select-box">
+      <span class="selected-items">აირჩიე კატეგორია</span>
+      <div class="select-icon"><img src="/." alt=""></div>
+    </div>
+    <div class="options-container" hidden>
+    </div>
+            </div>
+            <select id="category" name="category" class="small-input" multiple hidden>
               <option value="" selected disabled>აირჩიე კატეგორია</option>
               <option value="market">მარკეტი</option>
               <option value="application">აპლიკაცია</option>
@@ -134,6 +143,8 @@
               <option value="figma">Figma</option>
             </select>
           </div>
+        </div>
+
 
           <div class="email-input">
             <h2>ელ-ფოსტა</h2>
