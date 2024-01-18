@@ -66,38 +66,17 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (!response.ok) {
       throw new Error(`Status ${response.status}`);
     }
+    // Define json inside the try block and immediately after getting the response
     const json = await response.json();
+    console.log(json); // Check the structure of json
     createCategoryElements(json.data);
   } catch (error) {
     console.log("Error loading category data", error);
+    // If there's an error, also log the specific line where it happens
   }
 });
 
 function createCategoryElements(categories) {
   const categoryContainer = document.getElementById("category-container");
   categoryContainer.innerHTML = ""; // Clear any existing categories.
-
-  categories.forEach((category) => {
-    // Create a new button element for each category.
-    const categoryElement = document.createElement("button");
-    categoryElement.textContent = category.title; // Set the button text.
-    categoryElement.style.color = category.text_color; // Set the text color.
-    categoryElement.style.backgroundColor = category.background_color; // Set the background color.
-    categoryElement.dataset.id = category.id; // Store the category ID in a data attribute.
-
-    // Add a class for styling (you would define this class in your CSS).
-    categoryElement.classList.add("category-btn");
-
-    // Add an event listener for when this category is clicked.
-    categoryElement.addEventListener("click", function () {
-      // This function will toggle a class to visually indicate selection.
-      this.classList.toggle("selected");
-
-      // Any additional logic for when a category is selected or deselected goes here.
-      // For example, updating a hidden input field or a JavaScript data structure.
-    });
-
-    // Append the fully configured categoryElement to the container.
-    categoryContainer.appendChild(categoryElement);
-  });
 }
