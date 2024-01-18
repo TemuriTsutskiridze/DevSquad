@@ -11,21 +11,6 @@ function getDate() {
 
 getDate();
 
-// const dropArea = document.getElementsByClassName("file-drag-area");
-// const inputFile = document.getElementById("input-file");
-// function dragAndDrop() {}
-
-// dragAndDrop();
-
-// dropArea.addEventListener("dragover", function (event) {
-//   event.preventDefault();
-// });
-
-// dropArea.addEventListener("drop", function (event) {
-//   event.preventDefault();
-//   inputFile.files = event.dataTransfer.files;
-// });
-
 const imageInput = document.getElementById("input-file");
 const fileInfo = document.getElementById("file-info");
 const fileNameDisplay = document.getElementById("file-name");
@@ -40,6 +25,7 @@ function updateUIWithFile(file) {
   fileContainer.style.display = "none"; // Hide the file drag area by setting display to none
 }
 
+// Event listener for uploading file
 imageInput.addEventListener("change", function (event) {
   if (event.target.files.length > 0) {
     const file = event.target.files[0];
@@ -74,3 +60,44 @@ fileDragArea.addEventListener("drop", function (e) {
 });
 
 // ---------category choice
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const response = await fetch("http://localhost:3000/data");
+    if (!response.ok) {
+      throw new Error(`Status ${response.status}`);
+    }
+    const json = await response.json();
+    createCategoryElements(json.data);
+  } catch (error) {
+    console.log("Error loading category data", error);
+  }
+});
+
+function createCategoryElements(categories) {
+  const categoryContainer = document.getElementById("category-container");
+  categoryContainer.innerHTML = ""; // Clear any existing categories.
+
+  categories.forEach((category) => {
+    // Create a new button element for each category.
+    const categoryElement = document.createElement("button");
+    categoryElement.textContent = category.title; // Set the button text.
+    categoryElement.style.color = category.text_color; // Set the text color.
+    categoryElement.style.backgroundColor = category.background_color; // Set the background color.
+    categoryElement.dataset.id = category.id; // Store the category ID in a data attribute.
+
+    // Add a class for styling (you would define this class in your CSS).
+    categoryElement.classList.add("category-btn");
+
+    // Add an event listener for when this category is clicked.
+    categoryElement.addEventListener("click", function () {
+      // This function will toggle a class to visually indicate selection.
+      this.classList.toggle("selected");
+
+      // Any additional logic for when a category is selected or deselected goes here.
+      // For example, updating a hidden input field or a JavaScript data structure.
+    });
+
+    // Append the fully configured categoryElement to the container.
+    categoryContainer.appendChild(categoryElement);
+  });
+}
