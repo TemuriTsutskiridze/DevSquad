@@ -1,15 +1,14 @@
 .log-in-form-bg {
-    width: 1920px;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     background: #1A1A1F;
     opacity: 0.24;
     z-index: 50;
+    
   }
   
   .log-in-form {
-    margin-left: 750px;
-    margin-top: 374px;
     position: absolute;
     display: flex;
     align-items: center;
@@ -17,10 +16,12 @@
     background-color: #FFF;
     border-radius: 12px;
     width: 480px;
-    height: 272px;
-    flex-shrink: 0;
+    padding-bottom: 40px;
     color: #1A1A1F;
     z-index: 100;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
   }
   
   .log-in-input {
