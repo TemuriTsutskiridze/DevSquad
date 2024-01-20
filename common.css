@@ -29,7 +29,7 @@ header button {
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   border-radius: 8px;
   background: #5D37F3;
   color: #FFF;
@@ -47,11 +47,14 @@ header button:hover {
 
 
 
-#log-in-btn {
+#log-in-btn  {
   margin-left: auto; 
   margin-right: 76px;
 }
-
+#create-blog{
+  margin-left: auto; 
+  margin-right: 76px;
+}
 
 
 h1 {

@@ -8,6 +8,7 @@
   z-index: 50;
 }
 
+
 /* Styling for the login form */
 .log-in-form {
   position: absolute;
@@ -100,17 +101,7 @@
 
  
 
-/* Main heading styling */
-h1 {
-  color: #1A1A1F;
-  font-family: FiraGO;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 72px;
-  margin-left: 89px;
-  margin-top: 128px;
-}
+
 
 /* Styling for the blog section */
 .blog-section {
@@ -248,3 +239,4 @@ line-height: 28px;
 button:hover {
   cursor: pointer;
 }
+
