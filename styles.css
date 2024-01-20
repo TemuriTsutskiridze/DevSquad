@@ -8,7 +8,6 @@
   z-index: 50;
 }
 
-
 /* Styling for the login form */
 .log-in-form {
   position: absolute;
@@ -101,7 +100,17 @@
 
  
 
-
+/* Main heading styling */
+h1 {
+  color: #1A1A1F;
+  font-family: FiraGO;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+  margin-left: 89px;
+  margin-top: 128px;
+}
 
 /* Styling for the blog section */
 .blog-section {
@@ -198,7 +207,6 @@ line-height: 28px;
 /* Styling for buttons within blogs */
 .blogs div div button {
   display: flex;
-  width: 385px;
   height: 28px;
   padding: 6px 10px;
   align-items: flex-start;
@@ -207,10 +215,7 @@ line-height: 28px;
   border: 0;
 }
 
-/* Styling for button hover effect */
-.blogs div div button:hover {
-  cursor: default;
-}
+
 
 /* Styling for blog paragraphs */
 .blogs p {
@@ -222,10 +227,10 @@ line-height: 28px;
 
 /* Styling for blog links */
 .blogLink {
-  color: #5D37F3;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
+color: #5D37F3;
+font-size: 14px;
+font-weight: 500;
+line-height: 20px;
 }
 
 /* Styling for blog link images */
@@ -233,10 +238,5 @@ line-height: 28px;
   width: 20px;
   height: 20px;
 
-}
-
-/* Styling for button hover effect globally */
-button:hover {
-  cursor: pointer;
 }
 
