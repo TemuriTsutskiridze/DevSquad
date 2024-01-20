@@ -8,46 +8,51 @@
     <title>Home</title>
   </head>
   <body>
-    <div class="log-in-form-bg" style="display: none;">
-    </div>
+    <div class="log-in-form-bg" style="display: none;"></div>
     <div class="log-in-form" style="display: none;">
-        <img src="./img/add.svg" alt="add" id="add">
-        <div class="log-in-success" style="display: none;">
-            <img src="./img/tick-circle.svg" alt="tick" style="width: 64px; height: 64px; flex-shrink: 0; margin-bottom: 5px;">
-            <h3 style="font-size: 24px; font-weight: 700; line-height: 32px; margin: 0; margin-bottom: 30px;">წარმატებული ავტორიზაცია</h3>
-            <button class="submit" style="margin-top: 30px;">კარგი</button>
+      <img src="./img/add.svg" alt="Add Icon" id="add" />
+      <div class="log-in-success" style="display: none;">
+        <img
+          src="./img/tick-circle.svg"
+          alt="Tick Icon"
+          style="width: 64px; height: 64px; flex-shrink: 0; margin-bottom: 5px;"
+        />
+        <h3 style="font-size: 24px; font-weight: 700; line-height: 32px; margin: 0; margin-bottom: 30px;">
+          წარმატებული ავტორიზაცია
+        </h3>
+        <button class="submit" style="margin-top: 30px;">კარგი</button>
+      </div>
+      <div class="log-in-input">
+        <h3 style="font-size: 24px; font-weight: 700; line-height: 32px; margin: 0; margin-bottom: 30px;">შესვლა</h3>
+        <div class="mail-input">
+          <label for="mail" style="font-size: 14px; font-weight: 500;">ელ-ფოსტა</label>
+          <input type="email" id="mail" />
+          <div class="error" style="display: none;">
+            <img src="./img/info-circle.svg" alt="Info Icon" />
+            <p id="error-text" style="font-size: 12px;">ელ-ფოსტა არ მოიძებნა</p>
+          </div>
+          <button class="submit" style="margin-top: 40px;">შესვლა</button>
         </div>
-        <div class="log-in-input">
-            <h3 style="font-size: 24px; font-weight: 700; line-height: 32px; margin: 0; margin-bottom: 30px;">შესვლა</h3>
-            <div class="mail-input">
-                <label for="mail" style="font-size: 14px; font-weight: 500;">ელ-ფოსტა</label>
-                <input type="email" id="mail">
-                <div class="error" style="display: none;">
-                    <img src="./img/info-circle.svg" alt="info"> 
-                    <p id="error-text" style="font-size: 12px;">ელ-ფოსტა არ მოიძებნა</p>
-                </div>
-                <button class="submit" style="margin-top: 40px;">შესვლა</button>
-            </div>
-        </div>
+      </div>
     </div>
     <header>
-        <img src="./img/LOGO-02 3.png" alt="redberry" style="margin-left: 72px;">
-        <button id="log-in-btn">შესვლა</button>
-        <button onclick="location.href = '../new_blog/index.html';" style="display: none;" id="create-blog">ბლოგის შექმნა</button>
+      <img src="./img/LOGO-02 3.png" alt="Redberry Logo" style="margin-left: 72px;" />
+      <button id="log-in-btn">შესვლა</button>
+      <button onclick="location.href = '../new_blog/index.html';" style="display: none;" id="create-blog">ბლოგის შექმნა</button>
     </header>
     <main id="main-page">
-        <div style="display: flex;">
-            <h1>ბლოგი</h1>
-            <img src="./img/Blog-1024x355 1.png" alt="home image" style="margin-left: auto; margin-right: 72px; margin-top: 64px;">
-        </div>
-        <div class="blog-section">
-            <div class="categories">
-
-            </div>
-            <div class="blogs">
-                
-            </div>
-        </div>
+      <div style="display: flex;">
+        <h1>ბლოგი</h1>
+        <img
+          src="./img/Blog-1024x355 1.png"
+          alt="Home Image"
+          style="margin-left: auto; margin-right: 72px; margin-top: 64px;"
+        />
+      </div>
+      <div class="blog-section">
+        <div class="categories"></div>
+        <div class="blogs"></div>
+      </div>
     </main>
     <script src="script.js" defer></script>
   </body>

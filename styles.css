@@ -1,93 +1,250 @@
+/* Background overlay for the login section */
 .log-in-form-bg {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background: #1A1A1F;
-    opacity: 0.24;
-    z-index: 50;
-    
-  }
-  
-  .log-in-form {
-    position: absolute;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: #1A1A1F;
+  opacity: 0.24;
+  z-index: 50;
+}
+
+/* Styling for the login form */
+.log-in-form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 12px;
+  width: 480px;
+  padding-bottom: 40px;
+  color: #1A1A1F;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Styling for the login input section */
+.log-in-input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Styling for the close button */
+#add {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+}
+
+#add:hover {
+  cursor: pointer;
+}
+
+/* Styling for the mail input section */
+.mail-input {
+  display: flex;
+  flex-direction: column;
+  width: 432px;
+}
+
+.mail-input input {
+  margin-top: 8px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1.5px solid #5D37F3;
+  background: #F7F7FF;
+}
+
+/* Styling for error messages */
+.error {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  color: #EA1919;
+  font-weight: 400;
+}
+
+/* Styling for the success message after login */
+.log-in-success {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Styling for the submission button */
+.submit {
+  display: flex;
+  width: 432px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #5D37F3;
+  color: #FFF;
+  border: 0;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+ 
+
+/* Main heading styling */
+h1 {
+  color: #1A1A1F;
+  font-family: FiraGO;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+  margin-left: 89px;
+  margin-top: 128px;
+}
+
+/* Styling for the blog section */
+.blog-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Styling for categories section */
+.categories {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  justify-content: center;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: 1288px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: 10px;
+}
+
+/* Styling for category buttons */
+.categories button {
+  display: flex;
+  border-color: unset;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: none;
+  align-items: flex-start;
+  white-space: nowrap;
+  height: 32px;
+}
+
+/* Styling for blogs section */
+.blogs {
+  display: flex;
+  width: 1288px;
+  height: 620px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 56px 32px;
+  flex-wrap: wrap;
+}
+
+/* Styling for blog images */
+.blogs img {
+  width: 408px;
+  height: 328px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* Styling for blog content */
+.blogs div {
+  width: 408px;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    background-color: #FFF;
-    border-radius: 12px;
-    width: 480px;
-    padding-bottom: 40px;
-    color: #1A1A1F;
-    z-index: 100;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .log-in-input {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  #add {
-    margin-top: 20px; 
-    margin-right: 20px; 
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
-  }
-  
-  #add:hover {
-    cursor: pointer;
-  }
-  
-  .mail-input {
-    display: flex;
-    flex-direction: column;
-    width: 432px;
-  }
-  
-  .mail-input input {
-    margin-top: 8px; 
-    height: 44px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    border: 1.5px solid #5D37F3;
-    background: #F7F7FF;
-  }
-  
-  .error {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    color: #EA1919;
-    font-weight: 400;
-  }
-  
-  .log-in-success {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .submit {
-    display: flex;
-    width: 432px;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    background: #5D37F3;
-    color: #FFF;
-    border: 0;
-  }
-  
-  .submit:hover {
-    cursor: pointer;
-  }
+    align-items: flex-start;
+    gap: 16px;
+   
   
   
-  
-  
+}
+
+/* Styling for blog titles */
+.blogs h5 {
+ color: #1A1A1F;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px; 
+}
+
+/* Styling for additional information in blogs */
+.blogs span {
+color: #85858D;
+font-family: FiraGO;
+font-size: 12px;
+font-weight: 400;
+line-height: 16px; 
+}
+
+/* Styling for blog headings */
+.blogs h3 {
+color: #1A1A1F;
+font-size: 20px;
+font-weight: 500;
+line-height: 28px; 
+}
+
+/* Styling for buttons within blogs */
+.blogs div div button {
+  display: flex;
+  width: 385px;
+  height: 28px;
+  padding: 6px 10px;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 30px;
+  border: 0;
+}
+
+/* Styling for button hover effect */
+.blogs div div button:hover {
+  cursor: default;
+}
+
+/* Styling for blog paragraphs */
+.blogs p {
+color: #404049;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px; 
+}
+
+/* Styling for blog links */
+.blogLink {
+  color: #5D37F3;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* Styling for blog link images */
+.blogLink img {
+  width: 20px;
+  height: 20px;
+
+}
+
+/* Styling for button hover effect globally */
+button:hover {
+  cursor: pointer;
+}
