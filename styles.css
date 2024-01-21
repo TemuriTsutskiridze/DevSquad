@@ -175,9 +175,12 @@ h1 {
     align-items: flex-start;
     gap: 16px;
    
-  
-  
-}
+  }
+  .blogs div div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
 /* Styling for blog titles */
 .blogs h5 {
