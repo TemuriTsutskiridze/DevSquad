@@ -8,8 +8,6 @@
 
 body {
   font-family: "FiraGO", sans-serif;
-}
-body {
   min-height: 100vh;
   background: #F3F2FA;
 }
@@ -65,3 +63,4 @@ h1 {
   margin-left: 89px;
   margin-top: 128px;
 }
+
