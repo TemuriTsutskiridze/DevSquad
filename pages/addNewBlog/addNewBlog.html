@@ -66,16 +66,16 @@
         <section id="author-section">
           <div class="author-input">
             <h2>ავტორი *</h2>
-
-            <input
+ 
+            <input id="author-input"
               class="title-input small-input"
               type="name"
               placeholder="შეიყვანეთ ავტორი" />
 
             <ul class="validation-details first-list">
-              <li>მინიმუმ 4 სიმბოლო</li>
-              <li>მინიმუმ ორი სიტყვა</li>
-              <li>მხოლოდ ქართული სიმბოლოები</li>
+              <li id="minLengthError">მინიმუმ 4 სიმბოლო</li>
+              <li id="minWordsError">მინიმუმ ორი სიტყვა</li>
+              <li id="geoAlphabetError">მხოლოდ ქართული სიმბოლოები</li>
             </ul>
           </div>
 
@@ -128,7 +128,7 @@
             <select id="category" name="category" class="small-input">
 
               <div id="category-container"></div>
-              <!-- <option value="" selected disabled>აირჩიე კატეგორია</option>
+              <option value="" selected disabled>აირჩიე კატეგორია</option>
               <option value="market">მარკეტი</option>
               <option value="application">აპლიკაცია</option>
               <option value="artificial-inteligence">
@@ -136,7 +136,7 @@
               </option>
               <option value="ux-ui">UI-UX</option>
               <option value="research">კვლევა</option>
-              <option value="figma">Figma</option> -->
+              <option value="figma">Figma</option>
             </select>
           </div>
         </div>
