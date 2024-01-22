@@ -230,6 +230,7 @@ line-height: 28px;
 
 /* Styling for blog links */
 .blogLink {
+display: flex;
 color: #5D37F3;
 font-size: 14px;
 font-weight: 500;

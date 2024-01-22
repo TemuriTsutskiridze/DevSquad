@@ -122,7 +122,7 @@ fetch('https://api.blog.redberryinternship.ge/api/blogs', {
             blogLink.href = `./blog_page.html?id=${blogs[i].id}`;
             blogLink.textContent = 'View Full Article';
             let arrowIcon = document.createElement('img');
-            arrowIcon.src = './images/link-arrow.svg';
+            blogLink.innerHTML = 'სრულად ნახვა  <img src="../img/link-arrow.svg">';
             blogLink.appendChild(arrowIcon);
             blogLink.value = blogs[i].id;
             blog.appendChild(blogLink);
